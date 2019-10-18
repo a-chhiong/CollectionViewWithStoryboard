@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         //myCollViewLayout.itemSize = CGSize(width: (self.view.frame.size.width - 30) / 2, height: 120) // cell的寬、高
         //myCollViewLayout.minimumLineSpacing = CGFloat(integerLiteral: 10) // collectionView設定為縱向的話即「行」的間距、橫向則為「列」的間距
         //myCollViewLayout.minimumInteritemSpacing = CGFloat(integerLiteral: 10) // collectionView設定為縱向的話即「列」的間距、橫向則為「行」的間距
-        myCollViewLayout.scrollDirection = UICollectionViewScrollDirection.horizontal // 滑動方向，預設為垂直。注意若設為垂直，則cell的加入方式為由左至右，滿了才會換行；若是水平則由上往下，滿了才會換列
+        myCollViewLayout.scrollDirection = UICollectionViewScrollDirection.vertical // 滑動方向，預設為垂直。注意若設為垂直，則cell的加入方式為由左至右，滿了才會換行；若是水平則由上往下，滿了才會換列
     
         let nib = UINib(nibName: "MyCollectionViewCell", bundle: nil)
         self.myCollView.register(nib, forCellWithReuseIdentifier: "MyCollectionViewCell")
