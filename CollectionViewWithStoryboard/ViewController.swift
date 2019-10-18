@@ -37,9 +37,13 @@ extension ViewController: UICollectionViewDataSource {
     ///   - indexPath: _
     /// - Returns: _
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MyCollectionViewCell", for: indexPath) as! MyCollectionViewCell
+        
         // 設定背景色
-        cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.orange : UIColor.brown
+        cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.green : UIColor.red
+        
+        // 改變Label的文字內容
+        cell.mylabel.text = "Item: \(indexPath.item)";
         
         return cell
     }
